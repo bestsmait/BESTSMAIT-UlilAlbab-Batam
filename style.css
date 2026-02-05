@@ -1,0 +1,2469 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 90px;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("./fotofoto/formal.jpeg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.6); /* biar kebaca */
+    backdrop-filter: blur(6px);
+  }
+
+nav img {
+  width: 70px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-links ul li {
+  list-style: none;
+  padding: 8px 12px;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-links ul li::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #F4870B;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.text-box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 50px;
+}
+.text-box h2 {
+  font-size: 40px;
+  margin: 10px 0;
+  font-family: "Quintessential", serif;
+  font-style: italic;
+}
+
+.text-box p {
+  font-size: 20px;
+  margin: 10px 0 40px;
+  color: #fff;
+}
+
+nav .fa {
+  display: none;
+}
+
+@media(max-width: 700px) {
+
+  .text-box {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: 80px;
+    display: block;
+    z-index: 1;
+  }
+
+  .text-box h1 {
+  font-size: 24px;
+  }
+
+  .text-box h2 {
+    font-size: 18px;
+  }
+
+  .text-box p {
+    font-size: 14px;
+  }
+
+  .nav-links ul li {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    background: #673E0E;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    transition: 0.5s;
+    text-align: left;
+    z-index: 10;
+    flex: none;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.6); /* biar kebaca */
+    backdrop-filter: blur(6px);
+  }
+
+  nav .fa {
+    display: block;
+    color: #ffffff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+}
+
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(245, 230, 211, 0.95),
+      rgba(197, 97, 21, 0.95)
+    ),
+    url("fotofoto/gaya.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.hero-logo {
+  width: 140px;
+  margin-bottom: 30px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #402108; /* coklat mirip gambar */
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  color: #ffffff;
+  font-family: "Quintessential", serif;
+}
+
+@media (max-width: 700px) {
+  .hero-logo {
+    width: 100px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}
+
+/* ===== ABOUT US ===== */
+
+.about-section {
+  text-align: center; /* bikin semua teks di tengah */
+  padding: 80px 20px;
+  padding-top: 140px;
+}
+
+.about-title {
+  color: #7c3e0f; /* coklat elegan */
+  font-size: 50px;
+ 
+}
+
+.about-slider {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+
+/* tombol kiri kanan */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+/* dots */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.slider-dots span {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.slider-dots span.active {
+  background: #673E0E;
+}
+
+@media (max-width: 700px) {
+  .about-title {
+    font-size: 32px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    display: block;
+    z-index: 1;
+  }
+  
+}
+
+/* responsive desktop */
+@media (min-width: 768px) {
+  .slider-container {
+    max-width: 800px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#home,
+#about {
+  scroll-margin-top: 100px;
+}
+
+/* struktur */
+
+.struktur-section {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.struktur-section h1 {
+  color: #7c3e0f;
+  font-size: 36px;
+  font-family: "Quintessential", serif;
+  font-style: italic;
+}
+
+.struktur-section img {
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .struktur-content h1 {
+    font-size: 14px;
+  }
+  
+}
+
+/* presiden & wakil presiden */
+
+.pres-wapres-section {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  
+}
+
+.pres-wapres-profil {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;               /* jarak antar foto */
+  flex-wrap: nowrap;         /* biar rapi di HP */
+  margin-top: 30px;
+}
+
+.pres-wapres-profil img {
+  width: 200px;            /* UKURAN FOTO */
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.pres-wapres-profil h2 {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #402108;
+}
+
+.pres-wapres-profil p {
+  font-size: 14px;
+  color: #555;
+}
+
+
+.pres-wapres-section h1 {
+  font-size: 36px;
+  color: #7c3e0f;
+  font-family: "Quintessential", serif;
+  font-style: italic;
+  margin-bottom: 20px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+}
+
+.presiden-section {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+.presiden-section h1 {
+  color: #7c3e0f;
+  font-size: 50px;
+}
+.presiden-section img {
+  width: 40%;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+.wapres-section {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+.wapres-section h1 {
+  color: #7c3e0f;
+  font-size: 50px;
+}
+.wapres-section img {
+  width: 40%;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.presiden,
+.wapresiden,
+.protokoler {
+  width: 30%;        /* KUNCI UTAMA */
+  max-width: 200px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .pres-wapres-content h1 {
+    font-size: 14px;
+  }
+
+  .pres-wapres-profil {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .pres-wapres-profil img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .presiden h2{
+    font-size: 9px;
+  }
+  .presiden p{
+    font-size: 4px;
+  }
+
+  .wapresiden h2{
+    font-size: 9px;
+  } 
+  .wapresiden p{
+    font-size: 4px;
+  }
+
+  .protokoler h2{
+    font-size: 9px;
+  }
+  .protokoler p{
+    font-size: 4px;
+  }
+
+  .presiden,
+  .wapresiden,
+  .protokoler {
+    width: 32%;        /* 3 kolom PAS */
+    max-width: 140px;
+    text-align: center;
+  }
+
+
+}
+
+
+/* kementerian */
+
+.kementerian-section {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.kementerian-section h1 {
+  color: #7c3e0f;
+  font-size: 50px;
+  font-family: poppins, sans-serif;
+  font-style: normal;
+}
+
+.quintessential-regular {
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kementerian-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.kementerian-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+.circle {
+  width: 140px;
+  height: 140px;
+  margin: auto;
+  border-radius: 50%;
+  border: 3px solid #8b5e34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.kementerian-card p {
+  margin-top: 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* HOVER EFFECT */
+.kementerian-card:hover .circle {
+  background-color: #8b5e34;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+  .kementerian-section {
+    width: 100%;
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+
+  .kementerian-section h1 {
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
+
+  .kementerian-grid {
+    grid-template-columns: repeat(2, 90px);
+    justify-content: center;
+    gap: 16px;
+    padding-inline: 12px;
+  }
+
+  .circle {
+    width: 90px;
+    height: 90px;
+    font-size: 7.5px;
+  }
+
+  .kementerian-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kementerian-card p {
+    font-size: 10px;
+    line-height: 1.3;
+    margin-top: 8px;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+/* kemensekab */
+
+.kemensekab-section {
+  min-height: 100vh;
+  padding-top: 120px; /* jarak dari navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.kemensekab-foto-rame {
+  font-size: 60px;
+}
+
+
+.kemensekab-content {
+  text-align: center; /* bikin semua teks di tengah */
+  padding: 80px 20px;
+  padding-top: 140px;
+}
+
+.kemensekab-content h1 {
+  font-size: 50px;
+  color: #8b5e34;
+
+}
+
+.kemensekab-content p {
+  font-size: 20px;
+  margin: 10px 0 40px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+}
+
+.kemensekab-content img {
+  width: 80%;
+  margin-top: 30px;
+  border-radius: 10px;
+
+}
+
+.kemensekab-petinggi {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+}
+
+.kemensekab-petinggi img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.menteri-sekab,
+.sekmen-sekab {
+  text-align: center;
+}
+
+.kemensekab-anggota {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+}
+
+.kemensekab-anggota img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.anggota-sekab1,
+.anggota-sekab2 {
+  text-align: center;
+}
+
+.text-judul-anggota {
+  margin: 80px 0 60px; /* atas | kanan-kiri | bawah */
+  text-align: center;
+}
+
+.text-judul-anggota h2 {
+  font-size: 30px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+
+  .kemensekab-content h1 {
+    font-size: 32px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    display: block;
+    z-index: 1;
+  }
+
+  .kemensekab-content p {
+    font-size: 14px;
+  }
+
+  .kemensekab-petinggi {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kemensekab-petinggi img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .menteri-sekab h2{
+    font-size: 10px;
+  }
+  .menteri-sekab p{
+    font-size: 6px;
+  }
+
+  .sekmen-sekab h2{
+    font-size: 10px;
+  } 
+  .sekmen-sekab p{
+    font-size: 6px;
+  }
+
+  .menteri-sekab,
+  .sekmen-sekab {
+    width: 32%;        /* 3 kolom PAS */
+    max-width: 140px;
+    text-align: center;
+  }
+
+  .kemensekab-anggota {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kemensekab-anggota img {
+    width: 60%;
+    border-radius: 12px;
+  }
+
+  .text-judul-anggota h2 {
+    font-size: 20px;
+  }
+
+
+}
+
+
+/* EVENT SECTION */
+.event-section {
+  width: 90%;
+  max-width: 1100px;
+  margin: 100px auto;
+}
+
+.event-title {
+  text-align: center;
+  font-size: 40px;
+  color: #7c3e0f;
+  margin-bottom: 60px;
+}
+
+.event-title h1 {
+  font-family: 'poppins', sans-serif;
+  font-style: normal;
+  font-size: 50px;
+}
+
+/* CARD */
+.event-card {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+/* GRADIENT VARIAN */
+.event-card.pink {
+  background: linear-gradient(135deg, #ffd1e3, #ff316f);
+}
+
+/* FOTO POLAROID */
+.event-image {
+  background: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  max-width: 280px;
+}
+
+.event-image img {
+  width: 100%;
+  display: block;
+}
+
+.event-image span {
+  display: block;
+  font-size: 11px;
+  margin-top: 6px;
+  font-style: italic;
+  color: #555;
+}
+
+/* CONTENT */
+.event-content h2 {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.event-content p {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.event-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.event-btn:hover {
+  background: rgba(0,0,0,0.55);
+}
+
+@media (max-width: 768px) {
+
+  .event-title h1{
+    font-size: 32px;
+  }
+
+  .event-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .event-image {
+    max-width: 220px;
+  }
+
+  .event-content h2 {
+    font-size: 18px;
+  }
+
+  .event-content p {
+    font-size: 13px;
+  }
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  padding: 100px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.contact-section h1 {
+  font-size: 50px;
+  color: #7c3e0f;
+  margin-bottom: 60px;
+}
+
+.contact-social {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: nowrap;
+
+}
+
+.social-card {
+  width: 180px;
+  height: 180px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #402108;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  transition: 0.4s ease;
+}
+
+.social-card i {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.social-card p {
+  font-size: 12px;
+  text-align: center;
+  word-break: break-all;   /* BIAR GA KELUAR CARD */
+  line-height: 1.2;
+  max-width: 90%;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+.social-card:hover {
+  transform: translateY(-12px) scale(1.05);
+}
+
+/* WARNA ICON */
+.youtube i { color: #FF0000; }
+.instagram i { color: #E1306C; }
+.tiktok i { color: #000000; }
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .contact-section h1 {
+    font-size: 32px;
+  }
+
+  .contact-social {
+    gap: 12px;
+  }
+
+  .social-card {
+    width: 90px;
+    height: 90px;
+    padding: 6px;
+  }
+
+
+
+  .social-card i {
+    font-size: 26px;
+    margin-bottom: 4px;
+  }
+
+
+  .social-card p {
+    font-size: 7px;       /* 🔑 ini kuncinya */
+    letter-spacing: 0.3px;
+    text-align: center;
+    word-break: break-all;
+    line-height: 1.1;
+  }
+  
+  .social-card p {
+    font-size: 7px;       /* 🔑 ini kuncinya */
+    letter-spacing: 0.3px;
+    text-align: center;
+    word-break: break-all;
+    line-height: 1.1;
+  }
+
+  .social-card p {
+    font-size: 7px;       /* 🔑 ini kuncinya */
+    letter-spacing: 0.3px;
+    text-align: center;
+    word-break: break-all;
+    line-height: 1.1;
+  }
+
+  .social-card youtube p,
+  .social-card instagram p,
+  .social-card tiktok p {
+
+    font-size: 6px;
+
+    }
+   
+
+}
+
+/* kemenkeu */
+
+.kemenkeu-section {
+  min-height: 100vh;
+  padding-top: 120px; /* jarak dari navbar */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.kemenkeu-content {
+  text-align: center; /* bikin semua teks di tengah */
+  padding: 80px 20px;
+  padding-top: 140px;
+}
+
+.kemenkeu-content h1 {
+  font-size: 50px;
+  color: #8b5e34;
+
+}
+
+.kemenkeu-foto-rame {
+  font-size: 60px;
+}
+
+
+.kemenkeu-content p {
+  font-size: 20px;
+  margin: 10px 0 40px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+}
+
+.kemenkeu-content img {
+  width: 70%;
+  max-width: 700px;   /* 🔑 KUNCI */
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.kemenkeu-petinggi {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+}
+
+.kemenkeu-petinggi img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.menteri-keu,
+.sekmen-keu {
+  text-align: center;
+}
+
+.kemenkeu-anggota {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+}
+
+.kemenkeu-anggota img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.anggota-keu-akh,
+.anggota-keu-ikh1,
+.anggota-keu-ikh2 {
+  text-align: center;
+}
+
+.text-judul-anggota-keu h2 {
+  font-size: 30px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.text-judul-anggota-keu {
+  margin: 80px 0 60px; /* atas | kanan-kiri | bawah */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .kemenkeu-content h1 {
+    font-size: 32px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    display: block;
+    z-index: 1;
+  }
+
+  .kemenkeu-content p {
+    font-size: 14px;
+  }
+
+  .kemenkeu-petinggi {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kemenkeu-petinggi img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .menteri-keu h2{
+    font-size: 10px;
+  }
+  .menteri-keu p{
+    font-size: 6px;
+  }
+
+  .sekmen-keu h2{
+    font-size: 10px;
+  } 
+  .sekmen-keu p{
+    font-size: 6px;
+  }
+
+  .menteri-keu,
+  .sekmen-keu {
+    width: 32%;        /* 3 kolom PAS */
+    max-width: 140px;
+    text-align: center;
+  }
+
+  .kemenkeu-anggota {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kemenkeu-anggota img {
+    width: 60%;
+    border-radius: 12px;
+  }
+
+  .text-judul-anggota-keu h2 {
+    font-size: 20px;
+  }
+
+}
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+
+
+/* kemenag */
+
+.kemenag-section {
+  min-height: 100vh;
+  padding-top: 120px; /* jarak dari navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.kemenag-content {
+  text-align: center; /* bikin semua teks di tengah */
+  padding: 80px 20px;
+  padding-top: 140px;
+}
+
+.kemenag-content h1 {
+  font-size: 50px;
+  color: #8b5e34;
+
+}
+
+.kemenag-foto-rame {
+  font-size: 60px;
+}
+
+
+.kemenag-content p {
+  font-size: 20px;
+  margin: 10px 0 40px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+}
+
+.kemenag-content img {
+  width: 70%;
+  max-width: 700px;   /* 🔑 KUNCI */
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.kemenag-petinggi {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+}
+
+.kemenag-petinggi img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.menteri-menag,
+.sekmen-menag {
+  text-align: center;
+}
+
+.kemenag-anggota {
+  display: grid;
+  justify-content: center;
+  align-items:flex-start; 
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+  flex: 0 0 40%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "ikh1 ikh2"
+    "akh1 akh2";
+}
+
+/* IKH DI ATAS */
+.anggota-menag-ikh1,
+.anggota-menag-ikh2 {
+  order: 1;
+}
+
+/* AKH DI BAWAH */
+.anggota-menag-akh1,
+.anggota-menag-akh2 {
+  order: 2;
+}
+
+.kemenag-anggota img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+  height: auto;
+}
+
+.anggota-menag-akh1,
+.anggota-menag-akh2,
+.anggota-menag-ikh1,
+.anggota-menag-ikh2 {
+  text-align: center;
+}
+
+.text-judul-anggota-menag h2 {
+  font-size: 30px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.text-judul-anggota-menag {
+  margin: 80px 0 60px; /* atas | kanan-kiri | bawah */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .kemenag-content h1 {
+    font-size: 32px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    display: block;
+    z-index: 1;
+  }
+
+  .kemenag-content p {
+    font-size: 14px;
+  }
+
+  .kemenag-petinggi {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kemenag-petinggi img {
+    width: 100%;
+    border-radius: 12px;
+    max-width: 360px;
+  }
+
+  .menteri-menag h2{
+    font-size: 10px;
+  }
+  .menteri-menag p{
+    font-size: 6px;
+  }
+
+  .sekmen-menag h2{
+    font-size: 10px;
+  } 
+  .sekmen-menag p{
+    font-size: 6px;
+  }
+
+  .menteri-menag,
+  .sekmen-menag {
+    width: 32%;        /* 3 kolom PAS */
+    max-width: 140px;
+    text-align: center;
+  }
+
+  .kemenag-anggota {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kemenag-anggota img {
+    width: 60%;
+    border-radius: 12px;
+  }
+
+  .text-judul-anggota-menag h2 {
+    font-size: 20px;
+  }
+
+
+
+}
+
+
+/* KBN */
+
+.kbn-section {
+  min-height: 100vh;
+  padding-top: 120px; /* jarak dari navbar */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.kbn-content {
+  text-align: center; /* bikin semua teks di tengah */
+  padding: 80px 20px;
+  padding-top: 140px;
+}
+
+.kbn-content h1 {
+  font-size: 50px;
+  color: #8b5e34;
+
+}
+
+.kbn-foto-rame {
+  font-size: 60px;
+}
+
+
+.kbn-content p {
+  font-size: 20px;
+  margin: 10px 0 40px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+}
+
+.kbn-content img {
+  width: 70%;
+  max-width: 700px;   /* 🔑 KUNCI */
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.kbn-petinggi {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+}
+
+.kbn-petinggi img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.menteri-kbn,
+.sekmen-kbn {
+  text-align: center;
+}
+
+.kbn-anggota {
+  display: grid;
+  justify-content: center;
+  align-items:flex-start; 
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+  flex: 0 0 40%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "ikh1 ikh2"
+    "akh1 akh2";
+}
+
+/* IKH DI ATAS */
+.anggota-kbn-ikh1,
+.anggota-kbn-ikh2 {
+  order: 1;
+}
+
+/* AKH DI BAWAH */
+.anggota-kbn-akh1,
+.anggota-kbn-akh2 {
+  order: 2;
+}
+
+.kbn-anggota img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+  height: auto;
+}
+
+.anggota-kbn-akh1,
+.anggota-kbn-akh2,
+.anggota-kbn-ikh1,
+.anggota-kbn-ikh2 {
+  text-align: center;
+}
+
+.text-judul-anggota-kbn h2 {
+  font-size: 30px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.text-judul-anggota-kbn {
+  margin: 80px 0 60px; /* atas | kanan-kiri | bawah */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .kbn-content h1 {
+    font-size: 32px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    display: block;
+    z-index: 1;
+  }
+
+  .kbn-content p {
+    font-size: 14px;
+  }
+
+  .kbn-petinggi {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kbn-petinggi img {
+    width: 100%;
+    border-radius: 12px;
+    max-width: 360px;
+  }
+
+  .menteri-kbn h2{
+    font-size: 10px;
+  }
+  .menteri-kbn  p{
+    font-size: 6px;
+  }
+
+  .sekmen-kbn h2{
+    font-size: 10px;
+  } 
+  .sekmen-kbn p{
+    font-size: 6px;
+  }
+
+  .menteri-kbn,
+  .sekmen-kbn {
+    width: 32%;        /* 3 kolom PAS */
+    max-width: 140px;
+    text-align: center;
+  }
+
+  .kbn-anggota {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kbn-anggota img {
+    width: 60%;
+    border-radius: 12px;
+  }
+
+  .text-judul-anggota-kbn h2 {
+    font-size: 20px;
+  }
+
+}
+
+/* dikbud */
+
+.kemendikbud-section {
+  min-height: 100vh;
+  padding-top: 120px; /* jarak dari navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.kemendikbud-content {
+  text-align: center; /* bikin semua teks di tengah */
+  padding: 80px 20px;
+  padding-top: 140px;
+}
+
+.kemendikbud-content h1 {
+  font-size: 50px;
+  color: #8b5e34;
+
+}
+
+.kemendikbud-foto-rame {
+  font-size: 60px;
+}
+
+
+.kemendikbud-content p {
+  font-size: 20px;
+  margin: 10px 0 40px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+}
+
+.kemendikbud-content img {
+  width: 70%;
+  max-width: 700px;   /* 🔑 KUNCI */
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.kemendikbud-petinggi {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+}
+
+.kemendikbud-petinggi img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.menteri-dikbud,
+.sekmen-dikbud {
+  text-align: center;
+}
+
+.kemendikbud-anggota {
+  display: grid;
+  justify-content: center;
+  align-items:flex-start; 
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+  flex: 0 0 40%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "ikh1 ikh2"
+    "akh1 akh2";
+}
+
+/* IKH DI ATAS */
+.anggota-kemendikbud-ikh1,
+.anggota-kemendikbud-ikh2 {
+  order: 1;
+}
+
+/* AKH DI BAWAH */
+.anggota-kemendikbud-akh1,
+.anggota-kemendikbud-akh2 {
+  order: 2;
+}
+
+.kemendikbud-anggota img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+  height: auto;
+}
+
+.anggota-kemendikbud-akh1,
+.anggota-kemendikbud-akh2,
+.anggota-kemendikbud-ikh1,
+.anggota-kemendikbud-ikh2 {
+  text-align: center;
+}
+
+.text-judul-anggota-kemendikbud h2 {
+  font-size: 30px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.text-judul-anggota-kemendikbud {
+  margin: 80px 0 60px; /* atas | kanan-kiri | bawah */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .kemendikbud-content h1 {
+    font-size: 32px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    display: block;
+    z-index: 1;
+  }
+
+  .kemendikbud-content p {
+    font-size: 14px;
+  }
+
+  .kemendikbud-petinggi {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kemendikbud-petinggi img {
+    width: 100%;
+    border-radius: 12px;
+    max-width: 360px;
+  }
+
+  .menteri-dikbud h2{
+    font-size: 10px;
+  }
+  .menteri-dikbud  p{
+    font-size: 6px;
+  }
+
+  .sekmen-dikbud h2{
+    font-size: 10px;
+  } 
+  .sekmen-dikbud p{
+    font-size: 6px;
+  }
+
+  .menteri-dikbud,
+  .sekmen-dikbud {
+    width: 32%;        /* 3 kolom PAS */
+    max-width: 140px;
+    text-align: center;
+  }
+
+  .kemendikbud-anggota {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kemendikbud-anggota img {
+    width: 60%;
+    border-radius: 12px;
+  }
+
+  .text-judul-anggota-kemendikbud h2 {
+    font-size: 20px;
+  }
+
+}
+/* lingdup */
+
+.kemenlingdup-section {
+  min-height: 100vh;
+  padding-top: 120px; /* jarak dari navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.kemenlingdup-foto-rame {
+  font-size: 60px;
+}
+
+
+.kemenlingdup-content {
+  text-align: center; /* bikin semua teks di tengah */
+  padding: 80px 20px;
+  padding-top: 140px;
+}
+
+.kemenlingdup-content h1 {
+  font-size: 50px;
+  color: #8b5e34;
+
+}
+
+.kemenlingdup-content p {
+  font-size: 20px;
+  margin: 10px 0 40px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+}
+
+.kemenlingdup-content img {
+  width: 80%;
+  max-width: 680px; 
+  margin-top: 30px;
+  border-radius: 10px;
+
+}
+
+
+.kemenlingdup-petinggi {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+}
+
+.kemenlingdup-petinggi img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.menteri-kemenlingdup,
+.sekmen-kemenlingdup {
+  text-align: center;
+}
+
+.kemenlingdup-anggota {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+}
+
+.kemenlingdup-anggota img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.anggota-lingdup1,
+.anggota-lingdup2,
+.anggota-lingdup3 {
+  text-align: center;
+}
+
+.text-judul-anggota-kemenlingdup {
+  margin: 80px 0 60px; /* atas | kanan-kiri | bawah */
+  text-align: center;
+}
+
+.text-judul-anggota-kemenlingdup h2 {
+  font-size: 30px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+
+  .kemenlingdup-content h1 {
+    font-size: 32px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    display: block;
+    z-index: 1;
+  }
+
+  .kemenlingdup-content p {
+    font-size: 14px;
+  }
+
+  .kemenlingdup-petinggi {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kemenlingdup-petinggi img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .menteri-lingdup h2{
+    font-size: 10px;
+  }
+  .menteri-lingdup p{
+    font-size: 6px;
+  }
+
+  .sekmen-lingdup h2{
+    font-size: 10px;
+  } 
+  .sekmen-lingdup p{
+    font-size: 6px;
+  }
+
+  .menteri-lingdup,
+  .sekmen-lingdup {
+    width: 32%;        /* 3 kolom PAS */
+    max-width: 140px;
+    text-align: center;
+  }
+
+  .kemenlingdup-anggota {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kemenlingdup-anggota img {
+    width: 60%;
+    border-radius: 12px;
+  }
+
+  .text-judul-anggota-kemenlingdup h2 {
+    font-size: 20px;
+  }
+
+
+}
+
+/* kemenpora */
+
+.kemenpora-section {
+  min-height: 100vh;
+  padding-top: 120px; /* jarak dari navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.kemenpora-content {
+  text-align: center; /* bikin semua teks di tengah */
+  padding: 80px 20px;
+  padding-top: 140px;
+}
+
+.kemenpora-content h1 {
+  font-size: 50px;
+  color: #8b5e34;
+
+}
+
+.kemenpora-foto-rame {
+  font-size: 60px;
+}
+
+
+.kemenpora-content p {
+  font-size: 20px;
+  margin: 10px 0 40px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+}
+
+.kemenpora-content img {
+  width: 70%;
+  max-width: 700px;   /* 🔑 KUNCI */
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.kemenpora-petinggi {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+}
+
+.kemenpora-petinggi img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.menteri-pora,
+.sekmen-pora {
+  text-align: center;
+}
+
+.kemenpora-anggota {
+  display: grid;
+  justify-content: center;
+  align-items:flex-start; 
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+  flex: 0 0 40%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "ikh1 ikh2"
+    "akh1 akh2";
+}
+
+/* IKH DI ATAS */
+.anggota-pora-ikh1,
+.anggota-pora-ikh2 {
+  order: 1;
+}
+
+/* AKH DI BAWAH */
+.anggota-pora-akh1,
+.anggota-pora-akh2 {
+  order: 2;
+}
+
+.kemenpora-anggota img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+  height: auto;
+}
+
+.anggota-pora-akh1,
+.anggota-pora-akh2,
+.anggota-pora-ikh1,
+.anggota-pora-ikh2 {
+  text-align: center;
+}
+
+.text-judul-anggota-kemenpora h2 {
+  font-size: 30px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.text-judul-anggota-kemenpora {
+  margin: 80px 0 60px; /* atas | kanan-kiri | bawah */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .kemenpora-content h1 {
+    font-size: 32px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    display: block;
+    z-index: 1;
+  }
+
+  .kemenpora-content p {
+    font-size: 14px;
+  }
+
+  .kemenpora-petinggi {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kemenpora-petinggi img {
+    width: 100%;
+    border-radius: 12px;
+    max-width: 360px;
+  }
+
+  .menteri-pora h2{
+    font-size: 10px;
+  }
+  .menteri-pora p{
+    font-size: 6px;
+  }
+
+  .sekmen-pora h2{
+    font-size: 10px;
+  } 
+  .sekmen-pora p{
+    font-size: 6px;
+  }
+
+  .menteri-pora,
+  .sekmen-pora {
+    width: 32%;        /* 3 kolom PAS */
+    max-width: 140px;
+    text-align: center;
+  }
+
+  .kemenpora-anggota {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kemenpora-anggota img {
+    width: 60%;
+    border-radius: 12px;
+  }
+
+  .text-judul-anggota-kemenpora h2 {
+    font-size: 20px;
+  }
+
+}
+
+/* kpp */
+
+.kpp-section {
+  min-height: 100vh;
+  padding-top: 120px; /* jarak dari navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.kpp-content {
+  text-align: center; /* bikin semua teks di tengah */
+  padding: 80px 20px;
+  padding-top: 140px;
+}
+
+.kpp-content h1 {
+  font-size: 50px;
+  color: #8b5e34;
+
+}
+
+.kpp-foto-rame {
+  font-size: 60px;
+}
+
+
+.kpp-content p {
+  font-size: 20px;
+  margin: 10px 0 40px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+}
+
+.kpp-content img {
+  width: 70%;
+  max-width: 700px;   /* 🔑 KUNCI */
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.kpp-petinggi {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+}
+
+.kpp-petinggi img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.menteri-kpp,
+.sekmen-kpp {
+  text-align: center;
+}
+
+.kpp-anggota {
+  display: grid;
+  justify-content: center;
+  align-items:flex-start; 
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+  flex: 0 0 40%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "ikh1 ikh2"
+    "akh1 akh2";
+}
+
+/* IKH DI ATAS */
+.anggota-kpp1,
+.anggota-kpp2 {
+  order: 1;
+}
+
+/* AKH DI BAWAH */
+.anggota-kpp3,
+.anggota-kpp4 {
+  order: 2;
+}
+
+.kpp-anggota img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+  height: auto;
+}
+
+.anggota-kpp1,
+.anggota-kpp2,
+.anggota-kpp3,
+.anggota-kpp4 {
+  text-align: center;
+}
+
+.text-judul-anggota-kpp h2 {
+  font-size: 30px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.text-judul-anggota-kpp {
+  margin: 80px 0 60px; /* atas | kanan-kiri | bawah */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .kpp-content h1 {
+    font-size: 32px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    display: block;
+    z-index: 1;
+  }
+
+  .kpp-content p {
+    font-size: 14px;
+  }
+
+  .kpp-petinggi {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kpp-petinggi img {
+    width: 100%;
+    border-radius: 12px;
+    max-width: 360px;
+  }
+
+  .menteri-kpp h2{
+    font-size: 10px;
+  }
+  .menteri-kpp p{
+    font-size: 6px;
+  }
+
+  .sekmen-kpp h2{
+    font-size: 10px;
+  } 
+  .sekmen-kpp p{
+    font-size: 6px;
+  }
+
+  .menteri-kpp,
+  .sekmen-kpp {
+    width: 32%;        /* 3 kolom PAS */
+    max-width: 140px;
+    text-align: center;
+  }
+
+  .kpp-anggota {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kpp-anggota img {
+    width: 60%;
+    border-radius: 12px;
+  }
+
+  .text-judul-anggota-kpp h2 {
+    font-size: 20px;
+  }
+
+}
+
+/* minfo */
+
+.kominfo-section {
+  min-height: 100vh;
+  padding-top: 120px; /* jarak dari navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.kominfo-content {
+  text-align: center; /* bikin semua teks di tengah */
+  padding: 80px 20px;
+  padding-top: 140px;
+}
+
+.kominfo-content h1 {
+  font-size: 50px;
+  color: #8b5e34;
+
+}
+
+.kominfo-foto-rame {
+  font-size: 60px;
+}
+
+
+.kominfo-content p {
+  font-size: 20px;
+  margin: 10px 0 40px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+}
+
+.kominfo-content img {
+  width: 70%;
+  max-width: 700px;   /* 🔑 KUNCI */
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.kominfo-petinggi {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+}
+
+.kominfo-petinggi img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.menteri-minfo,
+.sekmen-minfo {
+  text-align: center;
+}
+
+.kominfo-anggota {
+  display: grid;
+  justify-content: center;
+  align-items:flex-start; 
+  gap: 60px;              /* jarak antar menteri & sekmen */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* biar turun rapi di HP */
+  flex: 0 0 40%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "ikh1 ikh2 ikh3"
+    "akh1 akh2";
+  text-align: center;
+}
+
+/* IKH DI ATAS */
+.anggota-minfo-ikh1,
+.anggota-minfo-ikh2,
+.anggota-minfo-ikh3 {
+  order: 1;
+}
+
+/* AKH DI BAWAH */
+.anggota-minfo-akh1,
+.anggota-minfo-akh2 {
+  order: 2;
+}
+
+.kominfo-anggota img {
+  width: 260px;           /* atur ukuran foto */
+  max-width: 100%;
+  border-radius: 16px;
+  height: auto;
+}
+
+.anggota-minfo-ikh1,
+.anggota-minfo-ikh2,
+.anggota-minfo-ikh3,
+.anggota-minfo-akh1,
+.anggota-minfo-akh2 {
+  text-align: center;
+}
+
+.text-judul-anggota-kominfo h2 {
+  font-size: 30px;
+  color: #8b5e34;
+  font-family: "Quintessential", serif;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.text-judul-anggota-kominfo {
+  margin: 80px 0 60px; /* atas | kanan-kiri | bawah */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .kominfo-content h1 {
+    font-size: 32px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    display: block;
+    z-index: 1;
+  }
+
+  .kominfo-content p {
+    font-size: 14px;
+  }
+
+  .kominfo-petinggi {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kominfo-petinggi img {
+    width: 100%;
+    border-radius: 12px;
+    max-width: 360px;
+  }
+
+  .menteri-minfo h2{
+    font-size: 10px;
+  }
+  .menteri-minfo p{
+    font-size: 6px;
+  }
+
+  .sekmen-minfo h2{
+    font-size: 10px;
+  } 
+  .sekmen-minfo p{
+    font-size: 6px;
+  }
+
+  .menteri-minfo,
+  .sekmen-minfo {
+    width: 32%;        /* 3 kolom PAS */
+    max-width: 140px;
+    text-align: center;
+  }
+
+  .kominfo-anggota {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .kominfo-anggota img {
+    width: 60%;
+    border-radius: 12px;
+  }
+
+  .text-judul-anggota-kominfo h2 {
+    font-size: 20px;
+  }
+
+}
